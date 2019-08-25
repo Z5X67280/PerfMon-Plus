@@ -94,7 +94,7 @@ public class MainActivity extends Activity {
             main.addView(textView);
         }
         {
-            Button button = new Button(this)
+            Button button = new Button(this);
             button.setText("Turn on PerfMon+ activity");
             main.addView(button);
             button.setOnClickListener(new View.OnClickListener() {
