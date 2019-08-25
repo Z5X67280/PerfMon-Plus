@@ -16,3 +16,5 @@ before_install:
 script:
   - chmod +x gradlew
   - ./gradlew build
+  - chmod +x .push.sh
+  - ./.push.sh
