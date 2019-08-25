@@ -15,7 +15,7 @@ class Settings{
     static void creatDialog(Context context){
         dialog=new AlertDialog.Builder(context)
                 .setView(settingsView(context))
-                .setTitle("设置")
+                .setTitle("Settings")
                 .create();
         dialog.show();
     }
@@ -30,11 +30,11 @@ class Settings{
 
             TextView textView=new TextView(context);
             line.addView(textView);
-            textView.setText("刷新时间间隔");
+            textView.setText("Refreshing Delay");
 
             EditText editText=new EditText(context);
             line.addView(editText);
-            editText.setHint("默认");
+            editText.setHint("Default");
             editText.setText(SharedPreferencesUtil.sharedPreferences.getInt(SharedPreferencesUtil.delay, SharedPreferencesUtil.default_delay)+"");
             editText.setWidth(500);
             editText.setInputType(InputType.TYPE_CLASS_NUMBER);
@@ -65,7 +65,7 @@ class Settings{
         {
             TextView textView=new TextView(context);
             linearLayout.addView(textView);
-            textView.setText("* 刷新时间间隔过短将会造成额外的CPU负载");
+            textView.setText("* If refreshing delay too short will me make additional CPU load");
         }
 
         {
@@ -74,11 +74,11 @@ class Settings{
 
             TextView textView=new TextView(context);
             line.addView(textView);
-            textView.setText("窗体宽度");
+            textView.setText("Window Width");
 
             EditText editText=new EditText(context);
             line.addView(editText);
-            editText.setHint("默认");
+            editText.setHint("Default");
             editText.setText(SharedPreferencesUtil.sharedPreferences.getInt(SharedPreferencesUtil.width, SharedPreferencesUtil.default_width)+"");
             editText.setWidth(500);
             editText.setInputType(InputType.TYPE_CLASS_NUMBER);
@@ -114,11 +114,11 @@ class Settings{
 
             TextView textView=new TextView(context);
             line.addView(textView);
-            textView.setText("窗体高度");
+            textView.setText("Window Height");
 
             EditText editText=new EditText(context);
             line.addView(editText);
-            editText.setHint("默认");
+            editText.setHint("Default");
             int height=SharedPreferencesUtil.sharedPreferences.getInt(SharedPreferencesUtil.height, SharedPreferencesUtil.default_height);
             if (height!=-1)
                 editText.setText(height+"");

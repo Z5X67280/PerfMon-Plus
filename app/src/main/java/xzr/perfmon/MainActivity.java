@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
         setContentView(main);
 
         if(!FloatingWindow.do_exit){
-            Toast.makeText(MainActivity.this,"请先关闭悬浮窗 再打开软件",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this,"Please turn off floating window then turn on app again.",Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
@@ -45,57 +45,57 @@ public class MainActivity extends Activity {
     void addview(){
         {
             TextView textView=new TextView(this);
-            textView.setText("支持cpu频率监控："+Tools.bool2text(Support.support_cpufreq));
+            textView.setText("Support CPU Frequency Monitor: "+Tools.bool2text(Support.support_cpufreq));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("支持cpu负载监控："+Tools.bool2text(Support.support_cpuload));
+            textView.setText("Support CPU Load Monitor: "+Tools.bool2text(Support.support_cpuload));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("支持gpu频率监控："+Tools.bool2text(Support.support_adrenofreq));
+            textView.setText("Support GPU Frequency Monitor: "+Tools.bool2text(Support.support_adrenofreq));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("支持gpu负载监控："+Tools.bool2text(Support.support_adrenofreq));
+            textView.setText("Support GPU Load Monitor: "+Tools.bool2text(Support.support_adrenofreq));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("支持cpubw频率监控："+Tools.bool2text(Support.support_cpubw));
+            textView.setText("Support CPUBW Frequency Monitor: "+Tools.bool2text(Support.support_cpubw));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("支持m4m频率监控："+Tools.bool2text(Support.support_m4m));
+            textView.setText("Support m4m Frequency Monitor: "+Tools.bool2text(Support.support_m4m));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("支持温度监控："+Tools.bool2text(Support.support_temp));
+            textView.setText("Support Temperature Monitor: "+Tools.bool2text(Support.support_temp));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("支持内存监控："+Tools.bool2text(Support.support_mem));
+            textView.setText("Support RAM Usage Monitor: "+Tools.bool2text(Support.support_mem));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("支持电流监控："+Tools.bool2text(Support.support_current));
+            textView.setText("Support Current Monitor: "+Tools.bool2text(Support.support_current));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("不支持的项目可能是你的设备真的不支持，也有可能是因为SELinux的阻挠。");
+            textView.setText("Unsupported item maybe is your device really unsupport it, and maybe is SELinux block me monitor it.");
             main.addView(textView);
         }
         {
-            Button button = new Button(this);
-            button.setText("打开悬浮窗");
+            Button button = new Button(this)
+            button.setText("Turn on PerfMon+ activity");
             main.addView(button);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -107,7 +107,7 @@ public class MainActivity extends Activity {
         }
         {
             Button button = new Button(this);
-            button.setText("设置");
+            button.setText("Settings");
             main.addView(button);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -118,7 +118,7 @@ public class MainActivity extends Activity {
         }
         {
             Button button=new Button(this);
-            button.setText("关闭SELinux(ROOT)");
+            button.setText("Turn off SELinux (Need Root)");
             main.addView(button);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -135,7 +135,7 @@ public class MainActivity extends Activity {
                             log=log+cache+"\n";
                         }
                         if (log.equals("")){
-                            Toast.makeText(MainActivity.this,"执行完毕 请重新打开软件",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this,"Success turn off SELinux, please manually open app again",Toast.LENGTH_SHORT).show();
                         }
                         else {
                             Toast.makeText(MainActivity.this,log,Toast.LENGTH_SHORT).show();
@@ -143,14 +143,14 @@ public class MainActivity extends Activity {
                         finish();
                     }
                     catch (Exception e){
-                        Toast.makeText(MainActivity.this,"没有ROOT权限",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,"Failed get root access, please try again.",Toast.LENGTH_SHORT).show();
                     }
                 }
             });
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("* 并不是真正的关闭SELinux 仅仅只是make it permissive\n* 此操作可能在一些设备上诱发崩溃\n");
+            textView.setText("* This is not really turn off SELinux, just make it permissive.\n* This operation maybe can make some device crash!\n");
             main.addView(textView);
         }
         {
@@ -158,7 +158,7 @@ public class MainActivity extends Activity {
             main.addView(line);
             {
                 TextView textView = new TextView(this);
-                textView.setText("访问Github ");
+                textView.setText("Github ");
                 line.addView(textView);
                 textView.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -172,7 +172,7 @@ public class MainActivity extends Activity {
 
             {
                 TextView textView = new TextView(this);
-                textView.setText("| 访问酷安（给个五星好评吧） ");
+                textView.setText("| Coolapk (Welcome give me 5 stars!!!) ");
                 line.addView(textView);
                 textView.setOnClickListener(new View.OnClickListener() {
                     @Override

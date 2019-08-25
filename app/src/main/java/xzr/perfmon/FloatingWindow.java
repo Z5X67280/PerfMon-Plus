@@ -65,7 +65,7 @@ public class FloatingWindow extends Service {
         main.setBackgroundColor(getResources().getColor(R.color.floating_window_backgrouns));
         main.setPadding((int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, 5,getResources().getDisplayMetrics()),0,0,0);
         TextView close=new TextView(this);
-        close.setText("关闭");
+        close.setText("Turn Off PerfMon+");
         close.setTextColor(getResources().getColor(R.color.white));
         main.addView(close);
         close.setOnClickListener(new View.OnClickListener() {
@@ -125,19 +125,19 @@ public class FloatingWindow extends Service {
                 int i=0;
                 if(Support.support_cpufreq) {
                     for (i = 0; i < RefreshingDateThread.cpunum; i++) {
-                        String text = "cpu" + i + " ";
+                        String text = "CPU" + i + " ";
                         if (cpuonline[i] == 1) {
                             text = text + cpufreq[i] + " Mhz";
                             if (Support.support_cpuload)
                                 text = text + Tools.format_ify_add_blank(cpufreq[i] + "") + cpuload[i] + "%";
                         } else {
-                            text = text + "离线";
+                            text = text + "offline";
                         }
                         line[i].setText(text);
                     }
                 }
                 if(Support.support_adrenofreq) {
-                    line[i].setText("gpu0 " + adrenofreq + " Mhz"+Tools.format_ify_add_blank(adrenofreq+"") + adrenoload + "%");
+                    line[i].setText("GPU0 " + adrenofreq + " Mhz"+Tools.format_ify_add_blank(adrenofreq+"") + adrenoload + "%");
                     i++;
                 }
                 if (Support.support_mincpubw) {
@@ -153,15 +153,15 @@ public class FloatingWindow extends Service {
                     i++;
                 }
                 if (Support.support_temp) {
-                    line[i].setText("温度 " + maxtemp+" ℃");
+                    line[i].setText("Temperature " + maxtemp+" ℃");
                     i++;
                 }
                 if (Support.support_mem) {
-                    line[i].setText("内存 " + memusage+"%");
+                    line[i].setText("RAM Usage " + memusage+"%");
                     i++;
                 }
                 if (Support.support_current) {
-                    line[i].setText("电流 " + current+" mA");
+                    line[i].setText("Current " + current+" mA");
                     i++;
                 }
                 return false;

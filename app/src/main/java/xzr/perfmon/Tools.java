@@ -34,8 +34,8 @@ class Tools {
     }
     static String bool2text(boolean bool){
         if(bool){
-            return "是";
+            return "Yes";
         }
-        return "否";
+        return "No";
     }
 }
