@@ -65,7 +65,7 @@ class Settings{
         {
             TextView textView=new TextView(context);
             linearLayout.addView(textView);
-            textView.setText("* If refreshing delay too short will me make additional CPU load");
+            textView.setText("* If refreshing delay too short will me make additional CPU load.");
         }
 
         {

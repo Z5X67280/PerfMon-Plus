@@ -137,15 +137,15 @@ public class FloatingWindow extends Service {
                     }
                 }
                 if(Support.support_adrenofreq) {
-                    line[i].setText("GPU0 " + adrenofreq + " Mhz"+Tools.format_ify_add_blank(adrenofreq+"") + adrenoload + "%");
+                    line[i].setText("GPU " + adrenofreq + " Mhz"+Tools.format_ify_add_blank(adrenofreq+"") + adrenoload + "%");
                     i++;
                 }
                 if (Support.support_mincpubw) {
-                    line[i].setText("mincpubw " + mincpubw);
+                    line[i].setText("MinCPUBW " + mincpubw);
                     i++;
                 }
                 if (Support.support_cpubw) {
-                    line[i].setText("cpubw " + cpubw);
+                    line[i].setText("CPUBW " + cpubw);
                     i++;
                 }
                 if (Support.support_m4m) {

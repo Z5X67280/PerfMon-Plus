@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
         setContentView(main);
 
         if(!FloatingWindow.do_exit){
-            Toast.makeText(MainActivity.this,"Please turn off floating window then turn on app again.",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this,"PerfMon+ activity is running, please turn off it then turn on app again.",Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
@@ -45,47 +45,47 @@ public class MainActivity extends Activity {
     void addview(){
         {
             TextView textView=new TextView(this);
-            textView.setText("Support CPU Frequency Monitor: "+Tools.bool2text(Support.support_cpufreq));
+            textView.setText("Support CPU Frequency Monitoring: "+Tools.bool2text(Support.support_cpufreq));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support CPU Load Monitor: "+Tools.bool2text(Support.support_cpuload));
+            textView.setText("Support CPU Load Monitoring: "+Tools.bool2text(Support.support_cpuload));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support GPU Frequency Monitor: "+Tools.bool2text(Support.support_adrenofreq));
+            textView.setText("Support GPU Frequency Monitoring: "+Tools.bool2text(Support.support_adrenofreq));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support GPU Load Monitor: "+Tools.bool2text(Support.support_adrenofreq));
+            textView.setText("Support GPU Load Monitoring: "+Tools.bool2text(Support.support_adrenofreq));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support CPUBW Frequency Monitor: "+Tools.bool2text(Support.support_cpubw));
+            textView.setText("Support CPUBW Frequency Monitoring: "+Tools.bool2text(Support.support_cpubw));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support m4m Frequency Monitor: "+Tools.bool2text(Support.support_m4m));
+            textView.setText("Support m4m Frequency Monitoring: "+Tools.bool2text(Support.support_m4m));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support Temperature Monitor: "+Tools.bool2text(Support.support_temp));
+            textView.setText("Support Temperature Monitoring: "+Tools.bool2text(Support.support_temp));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support RAM Usage Monitor: "+Tools.bool2text(Support.support_mem));
+            textView.setText("Support RAM Usage Monitoring: "+Tools.bool2text(Support.support_mem));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support Current Monitor: "+Tools.bool2text(Support.support_current));
+            textView.setText("Support Current Monitoring: "+Tools.bool2text(Support.support_current));
             main.addView(textView);
         }
         {
@@ -95,7 +95,7 @@ public class MainActivity extends Activity {
         }
         {
             Button button = new Button(this);
-            button.setText("Turn on PerfMon+ activity");
+            button.setText("Turn on PerfMon+ main activity");
             main.addView(button);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -135,7 +135,7 @@ public class MainActivity extends Activity {
                             log=log+cache+"\n";
                         }
                         if (log.equals("")){
-                            Toast.makeText(MainActivity.this,"Success turn off SELinux, please manually open app again",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this,"Success turn off SELinux, please manually open app again.",Toast.LENGTH_SHORT).show();
                         }
                         else {
                             Toast.makeText(MainActivity.this,log,Toast.LENGTH_SHORT).show();
