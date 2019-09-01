@@ -2,10 +2,8 @@
 
 #### Features Supported
 
-* CPU frequency monitor
-* CPU load monitor
-* GPU frequency monitor
-* GPU load monitor
+* CPU frequency and load monitor
+* GPU frequency and load monitor
 * CPUBW frequency monitor
 * M4M frequency monitor
 
