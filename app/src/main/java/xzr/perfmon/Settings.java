@@ -30,7 +30,7 @@ class Settings{
 
             TextView textView=new TextView(context);
             line.addView(textView);
-            textView.setText("Refreshing Delay");
+            textView.setText("Update interval");
 
             EditText editText=new EditText(context);
             line.addView(editText);
@@ -65,7 +65,7 @@ class Settings{
         {
             TextView textView=new TextView(context);
             linearLayout.addView(textView);
-            textView.setText("* If refreshing delay too short will me make additional CPU load.");
+            textView.setText("* If the update interval is too low, the monitoring will increase the CPU load.");
         }
 
         {
@@ -74,7 +74,7 @@ class Settings{
 
             TextView textView=new TextView(context);
             line.addView(textView);
-            textView.setText("Window Width");
+            textView.setText("Window width");
 
             EditText editText=new EditText(context);
             line.addView(editText);
@@ -114,7 +114,7 @@ class Settings{
 
             TextView textView=new TextView(context);
             line.addView(textView);
-            textView.setText("Window Height");
+            textView.setText("Window height");
 
             EditText editText=new EditText(context);
             line.addView(editText);

@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
         setContentView(main);
 
         if(!FloatingWindow.do_exit){
-            Toast.makeText(MainActivity.this,"PerfMon+ activity is running, please turn off it then turn on app again.",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this,"PerfMon+ activity is running, please restart the app.",Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
@@ -45,52 +45,52 @@ public class MainActivity extends Activity {
     void addview(){
         {
             TextView textView=new TextView(this);
-            textView.setText("Support CPU Frequency Monitoring: "+Tools.bool2text(Support.support_cpufreq));
+            textView.setText("Support CPU frequency monitoring: "+Tools.bool2text(Support.support_cpufreq));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support CPU Load Monitoring: "+Tools.bool2text(Support.support_cpuload));
+            textView.setText("Support CPU load monitoring: "+Tools.bool2text(Support.support_cpuload));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support GPU Frequency Monitoring: "+Tools.bool2text(Support.support_adrenofreq));
+            textView.setText("Support GPU frequency monitoring: "+Tools.bool2text(Support.support_adrenofreq));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support GPU Load Monitoring: "+Tools.bool2text(Support.support_adrenofreq));
+            textView.setText("Support GPU load monitoring: "+Tools.bool2text(Support.support_adrenofreq));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support CPUBW Frequency Monitoring: "+Tools.bool2text(Support.support_cpubw));
+            textView.setText("Support CPUBW frequency monitoring: "+Tools.bool2text(Support.support_cpubw));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support m4m Frequency Monitoring: "+Tools.bool2text(Support.support_m4m));
+            textView.setText("Support m4m frequency monitoring: "+Tools.bool2text(Support.support_m4m));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support Temperature Monitoring: "+Tools.bool2text(Support.support_temp));
+            textView.setText("Support temperature monitoring: "+Tools.bool2text(Support.support_temp));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support RAM Usage Monitoring: "+Tools.bool2text(Support.support_mem));
+            textView.setText("Support RAM usage monitoring: "+Tools.bool2text(Support.support_mem));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support Current Monitoring: "+Tools.bool2text(Support.support_current));
+            textView.setText("Support current monitoring: "+Tools.bool2text(Support.support_current));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Unsupported item maybe is your device really unsupport it, and maybe is SELinux block me monitor it.");
+            textView.setText("Unsupported item. Maybe SElinux is blocking it or it's unsupported by your device.");
             main.addView(textView);
         }
         {
@@ -118,7 +118,7 @@ public class MainActivity extends Activity {
         }
         {
             Button button=new Button(this);
-            button.setText("Turn off SELinux (Need Root)");
+            button.setText("Set permissive SElinux");
             main.addView(button);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -135,7 +135,7 @@ public class MainActivity extends Activity {
                             log=log+cache+"\n";
                         }
                         if (log.equals("")){
-                            Toast.makeText(MainActivity.this,"Success turn off SELinux, please manually open app again.",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(MainActivity.this,"Success. Please restart the app.",Toast.LENGTH_SHORT).show();
                         }
                         else {
                             Toast.makeText(MainActivity.this,log,Toast.LENGTH_SHORT).show();
@@ -150,7 +150,7 @@ public class MainActivity extends Activity {
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("* This is not really turn off SELinux, just make it permissive.\n* This operation maybe can make some device crash!\n");
+            textView.setText("*This operation can make some devices crash!\n");
             main.addView(textView);
         }
         {
@@ -172,7 +172,7 @@ public class MainActivity extends Activity {
 
             {
                 TextView textView = new TextView(this);
-                textView.setText("| Coolapk (Welcome give me 5 stars!!!) ");
+                textView.setText("| Coolapk (Give me 5 stars review!!!) ");
                 line.addView(textView);
                 textView.setOnClickListener(new View.OnClickListener() {
                     @Override

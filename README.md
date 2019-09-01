@@ -1,11 +1,10 @@
-# PerfMon+ - Simple Performance Monitor
+# PerfMon+ - A simple performance monitor
 
-#### Support
-* CPU Frequency Monitor
-* CPU Load Monitor
-* GPU Frequency Monitor
-* GPU Load Monitor
-* CPUBW Frequency Monitor
-* M4M Frequency Monitor
+#### Features Supported
 
-### Any PR is welcomed
+* CPU frequency and load monitor
+* GPU frequency and load monitor
+* CPUBW frequency monitor
+* M4M frequency monitor
+
+#### Any PR is welcomed
