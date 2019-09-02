@@ -28,7 +28,7 @@ public class MainActivity extends Activity {
         setContentView(main);
 
         if(!FloatingWindow.do_exit){
-            Toast.makeText(MainActivity.this,"PerfMon+ activity is running, please restart the app.",Toast.LENGTH_SHORT).show();
+            Toast.makeText(MainActivity.this,"PerfMon+ is running, please close it first.",Toast.LENGTH_SHORT).show();
             finish();
             return;
         }
@@ -45,57 +45,57 @@ public class MainActivity extends Activity {
     void addview(){
         {
             TextView textView=new TextView(this);
-            textView.setText("Support CPU frequency monitoring: "+Tools.bool2text(Support.support_cpufreq));
+            textView.setText("CPU frequency monitoring: "+Tools.bool2text(Support.support_cpufreq));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support CPU load monitoring: "+Tools.bool2text(Support.support_cpuload));
+            textView.setText("CPU load monitoring: "+Tools.bool2text(Support.support_cpuload));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support GPU frequency monitoring: "+Tools.bool2text(Support.support_adrenofreq));
+            textView.setText("GPU frequency monitoring: "+Tools.bool2text(Support.support_adrenofreq));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support GPU load monitoring: "+Tools.bool2text(Support.support_adrenofreq));
+            textView.setText("GPU load monitoring: "+Tools.bool2text(Support.support_adrenofreq));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support CPUBW frequency monitoring: "+Tools.bool2text(Support.support_cpubw));
+            textView.setText("CPUBW frequency monitoring: "+Tools.bool2text(Support.support_cpubw));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support m4m frequency monitoring: "+Tools.bool2text(Support.support_m4m));
+            textView.setText("M4m frequency monitoring: "+Tools.bool2text(Support.support_m4m));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support temperature monitoring: "+Tools.bool2text(Support.support_temp));
+            textView.setText("Temperature monitoring: "+Tools.bool2text(Support.support_temp));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support RAM usage monitoring: "+Tools.bool2text(Support.support_mem));
+            textView.setText("RAM usage monitoring: "+Tools.bool2text(Support.support_mem));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Support current monitoring: "+Tools.bool2text(Support.support_current));
+            textView.setText("Current monitoring: "+Tools.bool2text(Support.support_current));
             main.addView(textView);
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("Unsupported item. Maybe SElinux is blocking it or it's unsupported by your device.");
+            textView.setText("Some features may not be supported by your device");
             main.addView(textView);
         }
         {
             Button button = new Button(this);
-            button.setText("Turn on PerfMon+ main activity");
+            button.setText("Turn on PerfMon+");
             main.addView(button);
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -143,14 +143,14 @@ public class MainActivity extends Activity {
                         finish();
                     }
                     catch (Exception e){
-                        Toast.makeText(MainActivity.this,"Failed get root access, please try again.",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this,"Failed to get root access.",Toast.LENGTH_SHORT).show();
                     }
                 }
             });
         }
         {
             TextView textView=new TextView(this);
-            textView.setText("*This operation can make some devices crash!\n");
+            textView.setText("This operation can make some devices crash!\n");
             main.addView(textView);
         }
         {
