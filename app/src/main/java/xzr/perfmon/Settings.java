@@ -65,7 +65,7 @@ class Settings{
         {
             TextView textView=new TextView(context);
             linearLayout.addView(textView);
-            textView.setText("* If the update interval is too low, the monitoring will increase the CPU load.");
+            textView.setText("Low monitoring interval will increase CPU load");
         }
 
         {
